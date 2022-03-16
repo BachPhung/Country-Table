@@ -1,0 +1,42 @@
+.country-container {
+    overflow: hidden;
+    background-color: #f3f4f5;
+    z-index: 1;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    .arrow{
+        font-size: 45px;
+        position: absolute;
+        left: 20px;
+        top: 40%;
+    }
+    .card-container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .card {
+            width: 400px;
+            min-height: 500px;
+            display: flex;
+            margin-bottom: 60px;
+            flex-direction: column;
+            .flag{
+                
+                img{
+                    width: 400px;
+                }
+            }
+            .details{
+            
+                .section{
+                    display: flex;
+                    padding: 10px 5px;
+                    justify-content: space-between;
+                    border: 0.1px solid gray;
+                }
+            }
+        }
+    }
+}

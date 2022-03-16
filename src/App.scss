@@ -1,0 +1,45 @@
+.link{
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  transition: font-size 0.2s ease;
+  font-size: 16px;
+  &:hover{
+    color: blue;
+    font-size: 18px;
+  }
+}
+
+.link1{
+  text-decoration: none;
+  color: black;
+  transition: font-size 0.2s ease;
+  font-size: 16px;
+  &:hover{
+    color: blue;
+    font-size: 18px;
+  }
+}
+
+.link2{
+  text-decoration: none;
+  color:#f3f4f5;
+  transition: font-size 0.2s ease;
+  font-size: 16px;
+  &:hover{
+    color: #F76E11;
+    font-size: 18px;
+  }
+}
+
+.link3{
+  color: #f3f4f5;
+  text-decoration: none;
+  cursor: pointer;
+  transition: font-size 0.2s ease;
+  font-size: 16px;
+  &:hover{
+    color: blue;
+    font-size: 18px;
+  }
+}

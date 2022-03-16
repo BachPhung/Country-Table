@@ -1,0 +1,12 @@
+.card-container{
+  .card{
+    .details{
+      .section{
+        &__heading{
+            font-weight: 500;
+            font-size: 17px;
+            }
+      }
+    }
+  }
+}
