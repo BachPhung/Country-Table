@@ -9,5 +9,5 @@ docker image [docker image](https://hub.docker.com/repository/docker/bachphung/c
 Start project with docker on port 3000 on host machine
 
 ```
-docker run -it --rm -p 3000:3005 bachphung/country-table
+docker run -it --rm -p 3000:3000 bachphung/country-table
 ```

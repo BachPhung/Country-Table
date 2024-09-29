@@ -18,7 +18,5 @@ COPY --from=builder /app/build /app/build
 
 RUN npm install -g serve
 
-EXPOSE 3005
-
-CMD ["serve", "-s", "-l", "3005", "/app/build"]
+CMD ["serve", "-s", "/app/build"]
 
