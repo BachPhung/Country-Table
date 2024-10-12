@@ -24,7 +24,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/country-table:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.APP_NAME }}:latest
 
   deploy-heroku:
     runs-on: ubuntu-latest
@@ -35,11 +35,11 @@ jobs:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
         run: heroku container:login
 
-      - name: Push iamge to Heroku Container Registry
+      - name: Pull image and push to Heroku Container Registry
         run: |
-          heroku container:push web \
-            --app ${{ secrets.HEROKU_APP_NAME }} \
-            --image ${{ secrets.DOCKERHUB_USERNAME }}/country-table:latest
+          docker pull ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.APP_NAME }}:latest
+          docker tag ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.APP_NAME }}:latest registry.heroku.com/${{ secrets.APP_NAME }}/web
+          docker push registry.heroku.com/${{ secrets.APP_NAME }}/web
 
       - name: Release image to Heroku
-        run: heroku container:release web --app ${{ secrets.HEROKU_APP_NAME }}
+        run: heroku container:release web --app ${{ secrets.APP_NAME }}
